@@ -1,45 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的第一个网页</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zero to Tech · 个人主页</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/cards.css" />
+    <link rel="stylesheet" href="css/lab.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
   </head>
   <body>
-    <div class="card">
-      <div class="emoji">🚀</div>
-      <h1>你好，Git！</h1>
-      <p>这是我的第一个网页，现在它已经发布到互联网上了!</p>
-      <p>这个网页展示了 HTML、CSS 和 JavaScript 的基础应用。</p>
+    <div class="app-shell">
+      <div class="page-shell">
+        <main class="page-content">
+          <section class="dashboard-grid">
 
-      <div class="features">
-        <h2>✨ 功能特性</h2>
-        <ul>
-          <li>响应式设计，适配各种屏幕尺寸</li>
-          <li>流畅的动画效果</li>
-          <li>交互式按钮功能</li>
-          <li>现代化的渐变背景</li>
-          <li>优雅的卡片式布局</li>
-        </ul>
-      </div>
+            <!-- ↓↓↓ 顶部 hero：品牌 + 导航 + 大标题 + 副标题 ↓↓↓ -->
+            <!-- 这一整块在 text-lab.html 里几乎一字不差地又抄了一遍 -->
+            <article class="hero-stage panel-full">
+              <div class="hero-topline">
+                <p class="brand-eyebrow">zero to tech</p>
+                <nav class="inline-links hero-nav">
+                  <a class="nav-link" href="index.html">个人主页</a>
+                  <a class="nav-link" href="text-lab.html">文字实验室</a>
+                </nav>
+              </div>
+              <div class="hero-copy">
+                <h1 class="hero-display">关于我</h1>
+                <p class="hero-subtitle">项目，创意，灵感，心得，我的作品</p>
+              </div>
+            </article>
+            <!-- ↑↑↑ hero 结束 ↑↑↑ -->
 
-      <div id="counter">0</div>
+            <article class="panel panel-full featured-work-panel card">
+              <p class="section-kicker">作品</p>
+              <p class="featured-title">文字实验室</p>
+              <p class="featured-copy">拼音和情绪，挖掘中文里的细节</p>
+              <a class="featured-link" href="text-lab.html">
+                <span class="featured-link-label">打开作品</span>
+                <span class="arrow">›</span>
+              </a>
+            </article>
 
-      <div class="button-group">
-        <button class="btn-primary" onclick="showMessage()">显示消息</button>
-        <button class="btn-secondary" onclick="toggleCounter()">计数器</button>
-        <button class="btn-danger" onclick="changeEmoji()">切换表情</button>
-      </div>
+            <article class="panel panel-full identity-panel card">
+              <div class="identity-item">
+                <p class="section-kicker">座右铭</p>
+                <p class="identity-value identity-quote">已识乾坤大，尤怜草木青</p>
+              </div>
+              <div class="identity-item">
+                <p class="section-kicker">正在学习</p>
+                <p class="identity-value">零到全栈</p>
+              </div>
+            </article>
 
-      <div id="message"></div>
-
-      <div class="footer">
-        <p>Created with ❤️ | 学习编程的第一步</p>
-        <p style="margin-top: 8px;">© 2026 My First Website</p>
+          </section>
+        </main>
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@4/lib/anime.iife.min.js"></script>
+    <script src="js/cards.js"></script>
+    <script src="js/score.js"></script>
+    <script src="js/nav.js"></script>
   </body>
 </html>
